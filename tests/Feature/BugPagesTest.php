@@ -1,9 +1,5 @@
 <?php
 
-beforeEach(function () {
-    $this->withoutVite();
-});
-
 test('the bugs index links to every bug', function () {
     $response = $this->get(route('bugs.index'))->assertOk();
 

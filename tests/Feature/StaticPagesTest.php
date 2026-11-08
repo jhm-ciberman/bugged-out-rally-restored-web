@@ -1,9 +1,5 @@
 <?php
 
-beforeEach(function () {
-    $this->withoutVite();
-});
-
 test('screenshots render as links', function (string $url) {
     $this->get($url)
         ->assertSee('data-screenshot>', false)

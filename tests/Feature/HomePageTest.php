@@ -1,9 +1,5 @@
 <?php
 
-beforeEach(function () {
-    $this->withoutVite();
-});
-
 test('the home page links to every bug', function (string $name, string $slug) {
     $this->get(route('home'))
         ->assertOk()

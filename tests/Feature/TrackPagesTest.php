@@ -1,9 +1,5 @@
 <?php
 
-beforeEach(function () {
-    $this->withoutVite();
-});
-
 test('the tracks index links to every track', function () {
     $response = $this->get(route('tracks.index'))->assertOk();
 
