@@ -56,7 +56,7 @@
                 </div>
             @endforeach
 
-            <p class="text-sm/relaxed text-parchment">A few original bugs that broke things by accident are fixed. The ones that are part of how the game feels are kept.</p>
+            <p class="text-sm/relaxed text-parchment">A few original bugs (errors) that broke things by accident are fixed. The ones that are part of how the game feels are kept.</p>
         </div>
     </section>
 
