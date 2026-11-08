@@ -1,9 +1,10 @@
 @php
     $steps = [
-        ['Read the scripts', 'The rules, menus and bot logic are written in TorqueScript, and the game only ships them compiled. They have to be decompiled before anyone can read them.'],
-        ['Convert the art', 'The bugs, props and buildings are in old Torque formats (DTS and DIF). They get converted to glTF so a browser can draw them. Terrain, textures and sounds work as they are.'],
-        ['Fill in the engine', 'The game runs on the Torque Game Engine, and its source is public. A few parts were changed for this game, like how the bots drive and how race positions work. Those have to be read from the original executable.'],
-        ['Compare with the real thing', 'The original runs next to the port, with the camera in the same spot. Speeds, bot lap times, shadows, the HUD and the menus get compared one by one.'],
+        ['Read the scripts', 'The rules, menus and bot logic are written in TorqueScript, but the game only includes the compiled version. I ran a decompiler over every file and got readable scripts back. The comments were gone and a few lines came out garbled, but the logic was there.'],
+        ['Convert the art', 'The bugs, props and buildings use file formats from 2004 that no browser understands. With readers made by the Torque community, I converted all 81 models to glTF. The terrain, textures, sounds and music load straight from the original files.'],
+        ['Write the game again', 'Then I rebuilt it piece by piece in TypeScript and three.js: Torque\'s car physics, the sky, fog and water, the race rules, bots, weapons, hazards and every menu.'],
+        ['Read the original program', 'Torque\'s source code is public and explains most of the engine. But this game changed a few parts: how the bots drive and aim, how race positions work, when the Wrong Way warning shows. Those only exist in the original .exe, so I decoded them from there.'],
+        ['Compare it with the real game', 'A script starts the original game, puts the camera or the car in an exact spot, logs positions and speeds, and takes screenshots. I compared physics, bot lap times, shadows, the HUD and the menus, and fixed what didn\'t match. For example, my tires were 12 cm too big, so the cars sat too high.'],
     ];
 
     $comparisons = [
@@ -25,11 +26,11 @@
     </section>
 
     <section>
-        <h2 class="section-label">What it takes to bring it back</h2>
+        <h2 class="section-label">What it took to bring it back</h2>
 
-        <div class="panel grid gap-4 p-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="panel grid gap-4 p-6 sm:grid-cols-2">
             @foreach ($steps as [$title, $text])
-                <article class="info-card flex flex-col gap-2 p-4.5">
+                <article class="info-card flex flex-col gap-2 p-4.5 sm:last:col-span-2">
                     <span class="font-display text-[34px]/none text-trim">{{ $loop->iteration }}</span>
                     <h3 class="font-heading text-lg text-gold">{{ $title }}</h3>
                     <p class="text-sm/[1.55]">{{ $text }}</p>
