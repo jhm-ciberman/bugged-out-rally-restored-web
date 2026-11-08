@@ -69,6 +69,10 @@
     <dialog class="screenshot-viewer" data-screenshot-viewer>
         <img alt="">
     </dialog>
+
+    @env(['production'])
+        <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1856252808604ace9fa445ab9271ca59"}'></script>
+    @endenv
 </body>
 
 </html>
