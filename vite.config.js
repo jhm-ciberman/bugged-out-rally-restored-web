@@ -8,9 +8,13 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
+            assets: ['resources/images/**'],
             fonts: [
-                bunny('Instrument Sans', {
-                    weights: [400, 500, 600],
+                bunny('Anton', {
+                    weights: [400],
+                }),
+                bunny('Archivo Black', {
+                    weights: [400],
                 }),
             ],
         }),
