@@ -76,7 +76,7 @@
                     'scorpion' => 'Scorpion',
                     'blackwidow' => 'BlackWidow',
                 ] as $slug => $name)
-                    <a href="{{ route('bugs.show', $slug) }}" class="flex flex-col items-center gap-1 no-underline">
+                    <a href="{{ route("bugs.{$slug}") }}" class="flex flex-col items-center gap-1 no-underline">
                         <img
                             src="{{ Vite::image("cars/{$slug}.webp") }}"
                             alt=""

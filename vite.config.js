@@ -6,9 +6,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/model-viewer.js'],
             refresh: true,
-            assets: ['resources/images/**'],
+            assets: ['resources/images/**', 'resources/models/**', 'resources/videos/**'],
             fonts: [
                 bunny('Anton', {
                     weights: [400],
