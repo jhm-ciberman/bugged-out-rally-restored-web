@@ -45,10 +45,10 @@ final readonly class Track
         return collect([
             new self('croaky-pond', 1, 'Croaky Pond', 6, 6, 14, 2, 19, 7, 5, 'Dirt roads around a green pond. Frogs sit by the track and spit at you when you get close. It is the only track where the bots use two racing lines.'),
             new self('turtle-creek', 2, 'Turtle Creek', 7, 5, 15, 1, 24, 8, 5, 'Trails through green cliffs, with five dust devils on the way. It ties with Lunar for the most pickups.'),
-            new self('twin-peaks', 3, 'Twin Peaks', 7, 8, 15, 1, 14, 13, 9, 'Green hills, lakes and a tall bridge. Boulders roll at you in two places. It has more cherries than any other track.'),
+            new self('twin-peaks', 3, 'Twin Peaks', 7, 8, 15, 1, 14, 13, 9, 'Green hills, lakes and a tall bridge. Two launchers roll boulders at you in one area. It has more cherries than any other track.'),
             new self('boomerang-ii', 4, 'Boomerang II', 6, 6, 14, 1, 14, 8, 2, 'Steep brown hills with water below. Only Snowbound has fewer pickups.'),
             new self('snowbound', 5, 'Snowbound', 6, 5, 14, 1, 10, 10, 2, 'Snow and ice everywhere, and four launchers that send snowballs at you. It has the fewest pickups of any track.'),
-            new self('ocean-side', 6, 'Ocean Side', 6, 3, 14, 1, 13, 12, 2, 'A wooden track over the sea, between small islands. There are five water spouts, and only three boost pads.'),
+            new self('ocean-side', 6, 'Ocean Side', 6, 3, 14, 1, 13, 12, 2, 'Ground paths and wooden bridges take you between small islands. There are five water spouts, and only three boost pads.'),
             new self('dunes-ii', 7, 'Dunes II', 8, 9, 16, 1, 15, 14, 2, 'Sand trails across the desert, with cactus along the way. It has the most checkpoints and the most boost pads of any track.'),
             new self('lunar', 8, 'Lunar', 6, 3, 14, 1, 24, 11, 2, 'The last track, on the Moon: grey craters under a black sky. It ties with Turtle Creek for the most pickups.'),
         ]);

@@ -40,13 +40,13 @@ final readonly class Bug
     {
         return collect([
             new self('beetle', 1, 'Beetle', 0, 80, 5200, 55, 3400, 'The bug you start with. It has the thinnest armor in the game, and the same engine, top speed and boost as the next two bugs.'),
-            new self('ladybug', 2, 'Ladybug', 10000, 90, 5200, 55, 3400, 'The Ladybug drives just like the Beetle. The only difference is a bit more armor.'),
+            new self('ladybug', 2, 'Ladybug', 10000, 90, 5200, 55, 3400, 'The same engine, top speed and boost as the Beetle, with a bit more armor and a lower center of mass.'),
             new self('cockroach', 3, 'Cockroach', 25000, 120, 5200, 55, 3400, 'Still the starter engine, top speed and boost, but with much more armor than the Beetle or the Ladybug.'),
             new self('grasshopper', 4, 'Grasshopper', 50000, 120, 5400, 55, 3500, 'The first bug with a stronger engine and a stronger boost than the starters. Its top speed is the same.'),
             new self('hornet', 5, 'Hornet', 100000, 120, 5500, 57, 3700, 'The first bug with a higher top speed. It also beats the Grasshopper on engine and boost.'),
             new self('praying-mantis', 6, 'Praying Mantis', 150000, 120, 5400, 57, 3600, 'It costs more winnings than the Hornet and has the same top speed, but its engine and boost are weaker.'),
             new self('scorpion', 7, 'Scorpion', 200000, 140, 5600, 60, 3700, 'The top speed of the game, with more armor than any bug before it. Only the BlackWidow is stronger.'),
-            new self('blackwidow', 8, 'BlackWidow', 300000, 150, 5700, 60, 3800, 'The last bug to unlock, and the best one on every bar: armor, engine, top speed and boost.'),
+            new self('blackwidow', 8, 'BlackWidow', 300000, 150, 5700, 60, 3800, 'The last bug to unlock. It has the most armor and the strongest engine and boost, and it shares the highest top speed with the Scorpion.'),
         ]);
     }
 
