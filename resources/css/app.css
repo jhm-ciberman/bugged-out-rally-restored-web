@@ -3,6 +3,8 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+@custom-variant short (@media (max-height: 500px));
+
 @theme {
     --font-sans: Verdana, Geneva, Tahoma, sans-serif;
     --font-display: Anton, Impact, sans-serif;

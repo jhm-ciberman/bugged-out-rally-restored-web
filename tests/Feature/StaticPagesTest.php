@@ -29,6 +29,8 @@ test('the play page points at the game build and lists the controls', function (
         ->assertOk()
         ->assertSee('/game-build/index.html')
         ->assertSee('Drop a Magno bomb')
+        ->assertSee('Play with keyboard')
+        ->assertSee('Play with touch')
         ->assertSee('unofficial fan restoration project')
         ->assertSee('Not affiliated with Inoculous Games.');
 });

@@ -1,23 +1,39 @@
 <x-layout>
     <section class="panel grid items-center gap-8 p-7 md:grid-cols-2">
-        <x-screenshot
-            :src="Vite::image('screenshot-race.webp')"
-            alt="A race about to start on Croaky Pond, with the countdown at 2"
-            width="1280"
-            height="630"
-        />
+        <div class="flex flex-col gap-3">
+            <x-screenshot
+                :src="Vite::image('screenshot-race.webp')"
+                alt="A race about to start on Croaky Pond, with the countdown at 2"
+                width="1280"
+                height="630"
+            />
+
+            <div class="info-card flex flex-wrap items-center justify-around gap-x-3.5 gap-y-1 px-3.5 py-2">
+                <p class="text-center font-heading text-[17px]/tight whitespace-nowrap text-gold [text-shadow:2px_2px_0_var(--color-outline)]">Plays right<br>in your browser</p>
+
+                <div class="flex gap-4.5 text-xs font-bold">
+                    <div class="flex flex-col items-center">
+                        <img src="{{ Vite::image('ui/device-pc.webp') }}" alt="" width="58" height="58">
+                        PC
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <img src="{{ Vite::image('ui/device-phone.webp') }}" alt="" width="58" height="58">
+                        Mobile
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="flex flex-col gap-4">
             <h1 class="display-title text-5xl/[1.05]">Remember Bugged Out Rally?</h1>
             <p class="leading-relaxed">It's a racing game from 2004. You drive bugs on wheels, fire rockets at each other and drop bombs on the track. A small studio called Inoculous Games made it.</p>
-            <p class="leading-relaxed">The studio is gone, you can't buy the game anymore, and the original only runs on some Windows 11 machines. So I ported it to the browser. Same tracks, same bugs, same music.</p>
+            <p class="leading-relaxed">The studio is gone, you can't buy the game anymore, and the original doesn't run on modern systems. So I ported it to the browser. Same tracks, same bugs, same music.</p>
 
             <div class="mt-2 flex flex-wrap gap-4">
                 <a class="cta" href="{{ route('play') }}">Play it now</a>
                 <a class="cta cta-ghost" href="{{ route('restoration') }}">About the restoration</a>
             </div>
-
-            <p class="text-[13px] text-parchment">Free, nothing to install. You need a keyboard.</p>
         </div>
     </section>
 

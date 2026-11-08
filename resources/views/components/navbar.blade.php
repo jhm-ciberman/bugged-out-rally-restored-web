@@ -13,7 +13,7 @@
     <x-issue-link>Rights holder? Open an issue.</x-issue-link>
 </div>
 
-<header class="mx-auto flex w-full max-w-290 flex-wrap items-end justify-between gap-x-8 gap-y-4 px-4 pt-5 pb-2 sm:px-6">
+<header class="mx-auto flex w-full max-w-290 flex-wrap items-end justify-between gap-x-8 gap-y-4 px-4 pt-5 pb-2 sm:px-6 short:items-center short:pt-1 short:pb-0">
     <a href="{{ route('home') }}" aria-label="Bugged Out Rally Restored: home" class="block">
         <img
             src="{{ Vite::image('logo-restored.webp') }}"
@@ -21,10 +21,11 @@
             alt="Bugged Out Rally Restored"
             width="230"
             height="183"
+            class="short:w-24"
         >
     </a>
 
-    <nav aria-label="Main" class="flex flex-wrap gap-x-7 gap-y-1 pb-3.5">
+    <nav aria-label="Main" class="flex flex-wrap gap-x-7 gap-y-1 pb-3.5 short:pb-0">
         @foreach ($links as $link)
             <a
                 href="{{ route($link['route']) }}"

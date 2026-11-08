@@ -21,6 +21,15 @@
         <span class="badge">TypeScript</span>
         <span class="badge">Original assets</span>
         <span class="badge">Abandonware</span>
-        <a class="ml-2 text-[13px] font-bold" href="{{ config('site.game_repository') }}">Source on GitHub</a>
+        <a class="ml-2 flex items-center gap-1.5 text-[13px] font-bold" href="{{ config('site.game_repository') }}">
+            <img src="{{ Vite::image('ui/github-icon.webp') }}" alt="" width="28" height="28">
+            Source on GitHub
+        </a>
+
+        <a class="ml-2 flex items-center gap-1.5 text-[13px] font-bold" href="{{ route('play') }}">
+            <img src="{{ Vite::image('ui/device-pc.webp') }}" alt="" width="32" height="32">
+            <img src="{{ Vite::image('ui/device-phone.webp') }}" alt="" width="32" height="32">
+            Play it on your browser
+        </a>
     </div>
 </footer>
