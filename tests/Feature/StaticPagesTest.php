@@ -10,6 +10,14 @@ test('screenshots render as links', function (string $url) {
     'restoration' => '/restoration',
 ]);
 
+test('the analytics beacon only loads in production', function () {
+    $this->get(route('home'))->assertDontSee('cloudflareinsights', false);
+
+    app()->detectEnvironment(fn () => 'production');
+
+    $this->get(route('home'))->assertSee('cloudflareinsights', false);
+});
+
 test('the floating GitHub icon shows everywhere except the play page', function () {
     $this->get(route('home'))->assertSee('aria-label="Source code on GitHub"', false);
     $this->get(route('bugs.index'))->assertSee('aria-label="Source code on GitHub"', false);
