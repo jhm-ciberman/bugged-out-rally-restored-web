@@ -26,7 +26,10 @@
     </section>
 
     <section>
-        <h2 class="section-label">What it took to bring it back</h2>
+        <h2 class="section-label flex flex-wrap items-center gap-x-3 gap-y-1">
+            Porting Bugged Out Rally
+            <span class="version-tag self-center bg-[#1e5418] [text-shadow:none]">AI Assisted</span>
+        </h2>
 
         <div class="panel grid gap-4 p-6 sm:grid-cols-2">
             @foreach ($steps as [$title, $text])
