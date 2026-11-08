@@ -14,11 +14,11 @@
 </div>
 
 <header class="mx-auto flex w-full max-w-290 flex-wrap items-end justify-between gap-x-8 gap-y-4 px-4 pt-5 pb-2 sm:px-6">
-    <a href="{{ route('home') }}" aria-label="Bugged Out Rally, Restored: home" class="block">
+    <a href="{{ route('home') }}" aria-label="Bugged Out Rally Restored: home" class="block">
         <img
             src="{{ Vite::image('logo-restored.webp') }}"
             srcset="{{ Vite::image('logo-restored.webp') }} 1x, {{ Vite::image('logo-restored@2x.webp') }} 2x"
-            alt="Bugged Out Rally, Restored"
+            alt="Bugged Out Rally Restored"
             width="230"
             height="183"
         >

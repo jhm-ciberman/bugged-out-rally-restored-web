@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/jhm-ciberman/bugged-out-rally-restored-web/actions/workflows/tests.yml/badge.svg)](https://github.com/jhm-ciberman/bugged-out-rally-restored-web/actions/workflows/tests.yml)
 
-Source code for the fan website of [Bugged Out Rally, Restored](https://buggedoutrally.ciberman.net), a browser port of a racing game from 2004. Built with Laravel 13, Tailwind CSS, and Blade.
+Source code for the fan website of [Bugged Out Rally Restored](https://buggedoutrally.ciberman.net), a browser port of a racing game from 2004. Built with Laravel 13, Tailwind CSS, and Blade.
 
 > [!NOTE]
 > Bugged Out Rally is not my game. It was made in **2004** by **Inoculous Games** and is now **abandonware**. This site is not affiliated with Inoculous Games.

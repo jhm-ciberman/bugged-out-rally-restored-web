@@ -4,7 +4,7 @@
 ])
 
 @php
-    $siteName = 'Bugged Out Rally, Restored';
+    $siteName = 'Bugged Out Rally Restored';
     $pageTitle = $title ? "{$siteName}: {$title}" : $siteName;
 @endphp
 
