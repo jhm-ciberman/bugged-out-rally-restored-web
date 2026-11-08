@@ -188,4 +188,12 @@
     .step-link:hover {
         color: var(--color-gold-bright);
     }
+
+    .chip {
+        padding: 3px 6px;
+        background: rgb(0 0 0 / 0.3);
+        border: 1px solid rgb(247 201 72 / 0.4);
+        font-size: 11px;
+        white-space: nowrap;
+    }
 }

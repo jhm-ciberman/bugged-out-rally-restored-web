@@ -8,7 +8,7 @@ test('the home page links to every bug', function (string $name, string $slug) {
     $this->get(route('home'))
         ->assertOk()
         ->assertSee($name)
-        ->assertSee(route("bugs.{$slug}"));
+        ->assertSee(route('bugs.show', $slug));
 })->with([
     ['Beetle', 'beetle'],
     ['Ladybug', 'ladybug'],

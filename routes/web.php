@@ -1,19 +1,17 @@
 <?php
 
+use App\Http\Controllers\BugController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home')->name('home');
+Route::get('/', HomeController::class)->name('home');
 Route::view('/play', 'placeholder', ['heading' => 'Play'])->name('play');
 
-Route::view('/bugs', 'bugs.index')->name('bugs.index');
-Route::view('/bugs/beetle', 'bugs.beetle')->name('bugs.beetle');
-Route::view('/bugs/ladybug', 'bugs.ladybug')->name('bugs.ladybug');
-Route::view('/bugs/cockroach', 'bugs.cockroach')->name('bugs.cockroach');
-Route::view('/bugs/grasshopper', 'bugs.grasshopper')->name('bugs.grasshopper');
-Route::view('/bugs/hornet', 'bugs.hornet')->name('bugs.hornet');
-Route::view('/bugs/praying-mantis', 'bugs.praying-mantis')->name('bugs.praying-mantis');
-Route::view('/bugs/scorpion', 'bugs.scorpion')->name('bugs.scorpion');
-Route::view('/bugs/blackwidow', 'bugs.blackwidow')->name('bugs.blackwidow');
+Route::get('/bugs', [BugController::class, 'index'])->name('bugs.index');
+Route::get('/bugs/{slug}', [BugController::class, 'show'])->name('bugs.show');
 
-Route::view('/tracks', 'placeholder', ['heading' => 'The Tracks'])->name('tracks.index');
+Route::get('/tracks', [TrackController::class, 'index'])->name('tracks.index');
+Route::get('/tracks/{slug}', [TrackController::class, 'show'])->name('tracks.show');
+
 Route::view('/restoration', 'placeholder', ['heading' => 'About the restoration'])->name('restoration');

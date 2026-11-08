@@ -8,12 +8,16 @@ test('the bugs index links to every bug', function () {
     $response = $this->get(route('bugs.index'))->assertOk();
 
     foreach (['beetle', 'ladybug', 'cockroach', 'grasshopper', 'hornet', 'praying-mantis', 'scorpion', 'blackwidow'] as $slug) {
-        $response->assertSee(route("bugs.{$slug}"));
+        $response->assertSee(route('bugs.show', $slug));
     }
 });
 
+test('an unknown bug is not found', function () {
+    $this->get(route('bugs.show', 'dragonfly'))->assertNotFound();
+});
+
 test('a bug page shows its name, price and neighbours', function (string $slug, string $name, string $price, string $previous, string $next) {
-    $this->get(route("bugs.{$slug}"))
+    $this->get(route('bugs.show', $slug))
         ->assertOk()
         ->assertSee($name)
         ->assertSee($price)

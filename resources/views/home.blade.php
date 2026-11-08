@@ -66,26 +66,17 @@
 
         <div class="panel flex flex-col gap-4 px-6 pt-6 pb-5">
             <div class="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-3">
-                @foreach ([
-                    'beetle' => 'Beetle',
-                    'ladybug' => 'Ladybug',
-                    'cockroach' => 'Cockroach',
-                    'grasshopper' => 'Grasshopper',
-                    'hornet' => 'Hornet',
-                    'praying-mantis' => 'Praying Mantis',
-                    'scorpion' => 'Scorpion',
-                    'blackwidow' => 'BlackWidow',
-                ] as $slug => $name)
-                    <a href="{{ route("bugs.{$slug}") }}" class="flex flex-col items-center gap-1 no-underline">
+                @foreach ($bugs as $bug)
+                    <a href="{{ route('bugs.show', $bug->slug) }}" class="flex flex-col items-center gap-1 no-underline">
                         <img
-                            src="{{ Vite::image("cars/{$slug}.webp") }}"
+                            src="{{ Vite::image("cars/{$bug->slug}.webp") }}"
                             alt=""
                             width="130"
                             height="130"
                             loading="lazy"
                             class="aspect-square w-full max-w-32.5 object-contain"
                         >
-                        <span class="text-center font-heading text-sm [text-shadow:1px_1px_0_var(--color-outline)]">{{ $name }}</span>
+                        <span class="text-center font-heading text-sm [text-shadow:1px_1px_0_var(--color-outline)]">{{ $bug->name }}</span>
                     </a>
                 @endforeach
             </div>

@@ -1,16 +1,8 @@
-@props([
-    'slug',
-    'name',
-    'price',
-    'armor',
-    'engine',
-    'speed',
-    'boost',
-])
+@props(['bug'])
 
-<a class="link-card flex flex-col gap-2 p-3.5" href="{{ route("bugs.{$slug}") }}">
+<a class="link-card flex flex-col gap-2 p-3.5" href="{{ route('bugs.show', $bug->slug) }}">
     <img
-        src="{{ Vite::image("cars/{$slug}.webp") }}"
+        src="{{ Vite::image("cars/{$bug->slug}.webp") }}"
         alt=""
         width="240"
         height="240"
@@ -18,8 +10,8 @@
         class="aspect-square max-h-50 w-full object-contain"
     >
 
-    <span class="font-heading text-xl text-gold [text-shadow:1px_1px_0_var(--color-outline)]">{{ $name }}</span>
-    <span class="text-xs text-parchment">{{ $price === 0 ? 'Yours from the start' : 'Unlocks at '.number_format($price).' in winnings' }}</span>
+    <span class="font-heading text-xl text-gold [text-shadow:1px_1px_0_var(--color-outline)]">{{ $bug->name }}</span>
+    <span class="text-xs text-parchment">{{ $bug->priceLabel() }}</span>
 
-    <x-bug-stats :armor="$armor" :engine="$engine" :speed="$speed" :boost="$boost" />
+    <x-bug-stats :bug="$bug" />
 </a>

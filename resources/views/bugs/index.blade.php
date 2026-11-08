@@ -18,14 +18,9 @@
         </div>
 
         <div class="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4.5">
-            <x-bug-card slug="beetle" name="Beetle" :price="0" :armor="80" :engine="5200" :speed="55" :boost="3400" />
-            <x-bug-card slug="ladybug" name="Ladybug" :price="10000" :armor="90" :engine="5200" :speed="55" :boost="3400" />
-            <x-bug-card slug="cockroach" name="Cockroach" :price="25000" :armor="120" :engine="5200" :speed="55" :boost="3400" />
-            <x-bug-card slug="grasshopper" name="Grasshopper" :price="50000" :armor="120" :engine="5400" :speed="55" :boost="3500" />
-            <x-bug-card slug="hornet" name="Hornet" :price="100000" :armor="120" :engine="5500" :speed="57" :boost="3700" />
-            <x-bug-card slug="praying-mantis" name="Praying Mantis" :price="150000" :armor="120" :engine="5400" :speed="57" :boost="3600" />
-            <x-bug-card slug="scorpion" name="Scorpion" :price="200000" :armor="140" :engine="5600" :speed="60" :boost="3700" />
-            <x-bug-card slug="blackwidow" name="BlackWidow" :price="300000" :armor="150" :engine="5700" :speed="60" :boost="3800" />
+            @foreach ($bugs as $bug)
+                <x-bug-card :bug="$bug" />
+            @endforeach
         </div>
     </section>
 </x-layout>
