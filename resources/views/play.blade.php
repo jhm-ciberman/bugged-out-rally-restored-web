@@ -21,7 +21,7 @@
         <h1 class="sr-only">Play Bugged Out Rally</h1>
 
         <div class="panel p-1.5">
-            <div class="relative aspect-video w-full" data-game-stage data-game-url="/game-build/index.html">
+            <div class="relative aspect-video w-full" data-game-stage data-game-url="{{ asset('game-build/index.html') }}">
                 <button type="button" class="game-poster absolute inset-0 flex size-full cursor-pointer flex-col items-center justify-center gap-3.5 p-4 text-center" data-game-start>
                     <span class="display-title text-[52px]">Click to start</span>
                     <span class="text-sm text-sand">The game runs right here in the page.</span>
