@@ -84,8 +84,8 @@ The command does nothing if that release is already built. Pass `--force` to bui
 The game build lives outside the releases of the site, so it survives each deploy. The Forge deploy script builds it there and links it into the `public` folder:
 
 ```bash
-$FORGE_PHP artisan game:build /home/forge/buggedoutrally.ciberman.net/game-build
-ln -sfn /home/forge/buggedoutrally.ciberman.net/game-build ./public/game-build
+$FORGE_PHP artisan game:build $FORGE_SITE_ROOT/game-build
+ln -sfn $FORGE_SITE_ROOT/game-build ./public/game-build
 ```
 
 ## 🌐 Deploying
