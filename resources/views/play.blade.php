@@ -89,4 +89,13 @@
             </section>
         </div>
     </div>
+
+    <section>
+        <h2 class="section-label">Credits and rights</h2>
+
+        <div class="panel flex flex-col gap-3 p-6 text-[15px]/relaxed">
+            <p><strong class="text-gold">"Bugged Out Rally Restored"</strong> is an unofficial fan restoration project of the original "Bugged Out Rally" game, made in 2004 by Inoculous Games: Akio Cullum (producer, programmer and art) and Thomas Cullum (soundtrack). All the game's models, textures, sounds and music belong to them.</p>
+            <p>Ported to the browser by Javier "Ciberman" Mora. If you hold the rights and want anything changed or taken down, <x-issue-link>open an issue</x-issue-link> and I'll do it right away.</p>
+        </div>
+    </section>
 </x-layout>
