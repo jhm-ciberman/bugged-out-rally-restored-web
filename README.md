@@ -71,17 +71,20 @@ The numbers and short texts for each bug and track are in `app/Support/Bug.php` 
 
 The game itself is not part of this repository. It lives in [bugged-out-rally-restored](https://github.com/jhm-ciberman/bugged-out-rally-restored), and the `/play` page embeds it from `/game-build/index.html`.
 
-For local development, build the game with the right base path and copy its `dist` folder to `public/game-build` (gitignored):
+To build the latest release of the game into `public/game-build` (gitignored), run:
 
 ```bash
-npm run build -- --base=/game-build/
+php artisan game:build
 ```
+
+The command does nothing if that release is already built. Pass `--force` to build it again.
 
 ## 🔗 Symlinks
 
-The game build lives outside the releases of the site, so the Forge deploy script links it into the `public` folder:
+The game build lives outside the releases of the site, so it survives each deploy. The Forge deploy script builds it there and links it into the `public` folder:
 
 ```bash
+$FORGE_PHP artisan game:build /home/forge/buggedoutrally.ciberman.net/game-build
 ln -sfn /home/forge/buggedoutrally.ciberman.net/game-build ./public/game-build
 ```
 
@@ -91,6 +94,8 @@ Simply create a new release in GitHub and the website will be automatically depl
 
 > [!NOTE]
 > **How it works:** When you create a new Github release, a GitHub Action will move the `production` branch to the release, and Forge will deploy the changes. The deployment is handled by Laravel Forge using the `production` branch.
+
+To deploy a new version of the game, create a new release in the [game repository](https://github.com/jhm-ciberman/bugged-out-rally-restored). A GitHub Action calls the Forge deploy URL, stored in the `FORGE_DEPLOY_URL` secret of that repository, and the deploy builds the new release.
 
 ## 🔒 License
 
