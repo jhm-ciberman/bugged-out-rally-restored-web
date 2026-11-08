@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/model-viewer.js'],
+            input: ['resources/css/app.css', 'resources/js/app.js', 'resources/js/model-viewer.js', 'resources/js/play.js'],
             refresh: true,
             assets: ['resources/images/**', 'resources/models/**', 'resources/videos/**'],
             fonts: [

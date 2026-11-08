@@ -196,4 +196,56 @@
         font-size: 11px;
         white-space: nowrap;
     }
+
+    .game-poster {
+        background:
+            linear-gradient(rgb(0 0 0 / 0.55), rgb(0 0 0 / 0.55)),
+            url('../images/menus/play-poster.webp') center / cover no-repeat;
+    }
+
+    .game-toolbar {
+        background: rgb(30 86 24 / 0.93);
+        border: 5px solid var(--color-frame);
+        box-shadow:
+            0 0 0 1.5px var(--color-frame-light),
+            inset 0 0 0 1.5px #ffd06d;
+    }
+
+    .toolbar-action {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 8px 14px;
+        color: var(--color-nav);
+        font-family: var(--font-heading);
+        font-size: 17px;
+        text-decoration: none;
+        text-shadow: 2px 2px 0 var(--color-outline);
+    }
+
+    .toolbar-action:hover {
+        color: var(--color-gold-bright);
+    }
+
+    kbd {
+        display: inline-block;
+        min-width: 22px;
+        margin: 2px 2px 2px 0;
+        padding: 2px 7px;
+        background: var(--color-cream);
+        border: 1px solid var(--color-bark);
+        border-bottom-width: 3px;
+        color: var(--color-outline);
+        font: bold 12px var(--font-sans);
+        text-align: center;
+    }
+
+    .version-tag {
+        align-self: flex-start;
+        padding: 3px 10px;
+        border: 2px solid var(--color-trim);
+        color: #fff;
+        font-family: var(--font-heading);
+        font-size: 13px;
+    }
 }
