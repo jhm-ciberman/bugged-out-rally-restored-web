@@ -14,6 +14,12 @@ test('screenshots render as links', function (string $url) {
     'restoration' => '/restoration',
 ]);
 
+test('the floating GitHub icon shows everywhere except the play page', function () {
+    $this->get(route('home'))->assertSee('aria-label="Source code on GitHub"', false);
+    $this->get(route('bugs.index'))->assertSee('aria-label="Source code on GitHub"', false);
+    $this->get(route('play'))->assertDontSee('aria-label="Source code on GitHub"', false);
+});
+
 test('the play page points at the game build and lists the controls', function () {
     $this->get(route('play'))
         ->assertOk()

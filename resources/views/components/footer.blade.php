@@ -16,11 +16,11 @@
         </div>
     </div>
 
-    <div class="mx-auto flex max-w-290 flex-wrap gap-2 px-4 pb-7 sm:px-6">
+    <div class="mx-auto flex max-w-290 flex-wrap items-center gap-2 px-4 pb-7 sm:px-6">
         <span class="badge">three.js</span>
         <span class="badge">TypeScript</span>
         <span class="badge">Original assets</span>
         <span class="badge">Abandonware</span>
-        <a class="badge" href="{{ config('site.game_repository') }}">Source on GitHub</a>
+        <a class="ml-2 text-[13px] font-bold" href="{{ config('site.game_repository') }}">Source on GitHub</a>
     </div>
 </footer>
