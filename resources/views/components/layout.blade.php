@@ -72,6 +72,7 @@
 
     @env(['production'])
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "1856252808604ace9fa445ab9271ca59"}'></script>
+        <script async src="https://analytics.ahrefs.com/analytics.js" data-key="eksYTTOToJVgm5Ok5NTFpg"></script>
     @endenv
 </body>
 
