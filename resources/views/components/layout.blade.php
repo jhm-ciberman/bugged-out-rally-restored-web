@@ -54,6 +54,10 @@
 
         <x-footer />
     </div>
+
+    <dialog class="screenshot-viewer" data-screenshot-viewer>
+        <img alt="">
+    </dialog>
 </body>
 
 </html>

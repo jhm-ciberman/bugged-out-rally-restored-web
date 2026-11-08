@@ -46,12 +46,12 @@
                 <div class="grid gap-5 md:grid-cols-2">
                     <figure class="flex flex-col gap-2">
                         <span class="version-tag bg-[#c8102e]">2004 original</span>
-                        <img class="framed-image" src="{{ Vite::image("compare/{$comparison}-original.webp") }}" alt="{{ $description }} in the 2004 original" loading="lazy">
+                        <x-screenshot :src="Vite::image('compare/'.$comparison.'-original.webp')" alt="{{ $description }} in the 2004 original" loading="lazy" />
                     </figure>
 
                     <figure class="flex flex-col gap-2">
                         <span class="version-tag bg-[#1e5418]">Restored</span>
-                        <img class="framed-image" src="{{ Vite::image("compare/{$comparison}-restored.webp") }}" alt="{{ $description }} in the restored game" loading="lazy">
+                        <x-screenshot :src="Vite::image('compare/'.$comparison.'-restored.webp')" alt="{{ $description }} in the restored game" loading="lazy" />
                     </figure>
                 </div>
             @endforeach
@@ -64,9 +64,9 @@
         <h2 class="section-label">From the restored game</h2>
 
         <div class="panel grid gap-4 p-6 md:grid-cols-3">
-            <img class="framed-image" src="{{ Vite::image('tracks/aerials/track6-aerial1.webp') }}" alt="Aerial view of Ocean Side, a wooden track over the sea" width="1280" height="720" loading="lazy">
-            <img class="framed-image" src="{{ Vite::image('tracks/aerials/track3-aerial1.webp') }}" alt="Aerial view of Twin Peaks, with green hills and lakes" width="1280" height="720" loading="lazy">
-            <img class="framed-image" src="{{ Vite::image('tracks/backgrounds/track6.webp') }}" alt="The start line of Ocean Side, on a beach" width="1280" height="720" loading="lazy">
+            <x-screenshot :src="Vite::image('tracks/aerials/track6-aerial1.webp')" alt="Aerial view of Ocean Side, a wooden track over the sea" width="1280" height="720" loading="lazy" />
+            <x-screenshot :src="Vite::image('tracks/aerials/track3-aerial1.webp')" alt="Aerial view of Twin Peaks, with green hills and lakes" width="1280" height="720" loading="lazy" />
+            <x-screenshot :src="Vite::image('tracks/backgrounds/track6.webp')" alt="The start line of Ocean Side, on a beach" width="1280" height="720" loading="lazy" />
         </div>
     </section>
 

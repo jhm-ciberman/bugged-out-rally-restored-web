@@ -1,12 +1,11 @@
 <x-layout>
     <section class="panel grid items-center gap-8 p-7 md:grid-cols-2">
-        <img
-            class="framed-image"
-            src="{{ Vite::image('screenshot-race.webp') }}"
+        <x-screenshot
+            :src="Vite::image('screenshot-race.webp')"
             alt="A race about to start on Croaky Pond, with the countdown at 2"
             width="1280"
             height="630"
-        >
+        />
 
         <div class="flex flex-col gap-4">
             <h1 class="display-title text-5xl/[1.05]">Remember Bugged Out Rally?</h1>
@@ -50,14 +49,13 @@
                 <li>The original menus, music and sounds</li>
             </ul>
 
-            <img
-                class="framed-image"
-                src="{{ Vite::image('tracks/backgrounds/track1.webp') }}"
+            <x-screenshot
+                :src="Vite::image('tracks/backgrounds/track1.webp')"
                 alt="The start line of Croaky Pond, with the orange and white checkered grid"
                 width="1280"
                 height="720"
                 loading="lazy"
-            >
+            />
         </div>
     </section>
 

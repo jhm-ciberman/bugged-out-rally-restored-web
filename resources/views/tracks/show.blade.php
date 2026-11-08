@@ -44,12 +44,11 @@
             <h2 class="section-label">The map</h2>
 
             <div class="panel flex flex-col gap-3 p-4.5">
-                <img
-                    class="framed-image"
-                    src="{{ Vite::image("tracks/maps/track{$track->number}-annotated.webp") }}"
+                <x-screenshot
+                    :src="Vite::image('tracks/maps/track'.$track->number.'-annotated.webp')"
                     alt="Top-down map of {{ $track->name }} with the racing line, checkpoints, boost pads and pickups"
                     loading="lazy"
-                >
+                />
                 <p class="text-[13px]/normal text-parchment">The white line is the bots' racing line. The numbers are the checkpoints, in order.</p>
             </div>
         </section>
@@ -83,14 +82,14 @@
                 <h2 class="section-label">In 2004</h2>
 
                 <div class="panel flex items-end gap-3.5 p-4.5">
-                    <img
-                        class="framed-image w-44!"
-                        src="{{ Vite::image("tracks/original/track{$track->number}.webp") }}"
+                    <x-screenshot
+                        class="w-44!"
+                        :src="Vite::image('tracks/original/track'.$track->number.'.webp')"
                         alt="The {{ $track->name }} picture from the 2004 menu"
                         width="352"
                         height="296"
                         loading="lazy"
-                    >
+                    />
                     <p class="text-[13px]/normal text-parchment">The picture the original game showed in its track menu.</p>
                 </div>
             </section>
@@ -101,9 +100,9 @@
         <h2 class="section-label">On the ground</h2>
 
         <div class="panel grid gap-4 p-5.5 md:grid-cols-3">
-            <img class="framed-image" src="{{ Vite::image("tracks/backgrounds/track{$track->number}.webp") }}" alt="The start line of {{ $track->name }}" width="1280" height="720" loading="lazy">
-            <img class="framed-image" src="{{ Vite::image("tracks/backgrounds/track{$track->number}-vista1.webp") }}" alt="A low view along the {{ $track->name }} track" width="1280" height="720" loading="lazy">
-            <img class="framed-image" src="{{ Vite::image("tracks/backgrounds/track{$track->number}-vista2.webp") }}" alt="Another low view along the {{ $track->name }} track" width="1280" height="720" loading="lazy">
+            <x-screenshot :src="Vite::image('tracks/backgrounds/track'.$track->number.'.webp')" alt="The start line of {{ $track->name }}" width="1280" height="720" loading="lazy" />
+            <x-screenshot :src="Vite::image('tracks/backgrounds/track'.$track->number.'-vista1.webp')" alt="A low view along the {{ $track->name }} track" width="1280" height="720" loading="lazy" />
+            <x-screenshot :src="Vite::image('tracks/backgrounds/track'.$track->number.'-vista2.webp')" alt="Another low view along the {{ $track->name }} track" width="1280" height="720" loading="lazy" />
         </div>
     </section>
 
@@ -112,7 +111,7 @@
 
         <div class="panel grid gap-4 p-5.5 md:grid-cols-3">
             @foreach ([1 => 'first', 2 => 'second', 3 => 'third'] as $aerial => $side)
-                <img class="framed-image" src="{{ Vite::image("tracks/aerials/track{$track->number}-aerial{$aerial}.webp") }}" alt="{{ $track->name }} from above, {{ $side }} side" width="1280" height="720" loading="lazy">
+                <x-screenshot :src="Vite::image('tracks/aerials/track'.$track->number.'-aerial'.$aerial.'.webp')" alt="{{ $track->name }} from above, {{ $side }} side" width="1280" height="720" loading="lazy" />
             @endforeach
         </div>
     </section>
@@ -122,7 +121,7 @@
 
         <div class="panel grid gap-4 p-5.5 md:grid-cols-3">
             @foreach ([1, 2, 3] as $shot)
-                <img class="framed-image" src="{{ Vite::image("tracks/racing/track{$track->number}-{$shot}.webp") }}" alt="A race on {{ $track->name }}" width="1280" height="720" loading="lazy">
+                <x-screenshot :src="Vite::image('tracks/racing/track'.$track->number.'-'.$shot.'.webp')" alt="A race on {{ $track->name }}" width="1280" height="720" loading="lazy" />
             @endforeach
         </div>
     </section>
