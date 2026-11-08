@@ -60,7 +60,7 @@
             href="{{ config('site.game_repository') }}"
             aria-label="Source code on GitHub"
             title="Source on GitHub"
-            class="fixed right-3 bottom-3 z-40 block size-14 drop-shadow-[0_3px_0_rgb(58_22_0/0.55)] transition-transform hover:scale-110 md:right-5 md:bottom-5 md:size-18"
+            class="fixed right-2 bottom-2 z-40 block size-11 drop-shadow-[0_3px_0_rgb(58_22_0/0.55)] transition-transform hover:scale-110 md:right-5 md:bottom-5 md:size-18 short:right-2 short:bottom-2 short:size-11"
         >
             <img src="{{ Vite::image('ui/github-icon.webp') }}" alt="" width="72" height="72">
         </a>

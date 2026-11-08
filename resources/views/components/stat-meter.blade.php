@@ -12,12 +12,12 @@
 
 <div @class([
     'grid items-center',
-    'grid-cols-[86px_minmax(0,1fr)_58px] gap-2.5 text-[13px]' => $display !== null,
+    'grid-cols-[minmax(0,1fr)_auto] gap-x-2.5 gap-y-1 text-[13px] sm:grid-cols-[86px_minmax(0,1fr)_58px]' => $display !== null,
     'grid-cols-[70px_minmax(0,1fr)] gap-2 text-[11px]' => $display === null,
 ])>
     <span>{{ $label }}</span>
 
-    <span class="flex gap-0.5" aria-hidden="true">
+    <span @class(['flex gap-0.5', 'max-sm:col-span-2 max-sm:row-start-2' => $display !== null]) aria-hidden="true">
         @for ($segment = 0; $segment < 10; $segment++)
             <span @class([
                 'stat-segment',
@@ -29,7 +29,7 @@
     </span>
 
     @if ($display !== null)
-        <span class="text-right text-parchment">{{ $display }}</span>
+        <span class="text-right text-parchment max-sm:col-start-2 max-sm:row-start-1">{{ $display }}</span>
     @else
         <span class="sr-only">{{ $value }}</span>
     @endif
