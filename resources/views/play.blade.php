@@ -34,7 +34,7 @@
         </div>
 
         <div class="game-toolbar mt-3.5 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 px-3.5 py-1">
-            <span class="text-[13px] text-sand">Your players and settings stay in this browser.</span>
+            <span class="text-[13px] text-sand">Your players and settings are saved in this browser.</span>
 
             <div class="flex flex-wrap gap-x-3 gap-y-1">
                 <button type="button" class="toolbar-action cursor-pointer" data-game-fullscreen>Fullscreen</button>
